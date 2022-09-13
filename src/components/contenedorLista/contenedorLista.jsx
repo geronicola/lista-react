@@ -1,11 +1,12 @@
-import React from "react";
 import Form from "./form/form";
 import Title from "./titles/title"
 import SubTitle from "./titles/subTitle"
 import AlertMessage from "./form/alertMessage";
 import ShowList from "./showList/showList"
 
-const BoxLista = () => {
+
+
+const ContenedorLista = ({lista, agregar, }) => {
     return (
         <main>
             <Title 
@@ -13,9 +14,13 @@ const BoxLista = () => {
                 text="Lista de Tareas!">    
             </Title>
 
-            <Form>
+            <Form 
+                lista={lista}
+                agregar={agregar}
+                idInput={"tarea"}
+                name={"tarea"}
+            />
                 
-            </Form>
 
             <SubTitle
                 text={"Tareas!"}
@@ -25,7 +30,9 @@ const BoxLista = () => {
                 alertText={"Parece que no hay nada por aqui!"}
             />
 
-            <ShowList> </ShowList>
+            <ShowList
+                lista={lista}  
+            />
         </main>
         
     
@@ -33,4 +40,4 @@ const BoxLista = () => {
 }
 
 
-export default BoxLista;
+export default ContenedorLista;

@@ -1,11 +1,29 @@
 import './index.css';
-import BoxLista from './components/lista/lista';
+import ContenedorLista from './components/contenedorLista/contenedorLista';
+import React, {Fragment, useState} from "react";
 
-import React, {Fragment} from "react";
+
 function App() {
+
+  const [lista, setLista] = useState([])
+
+  const agregarTarea = () => {
+    const tarea = document.getElementById("tarea")
+    const prioridad = document.getElementById("prioridad")
+    setLista([...lista, [tarea.value, prioridad.value]])
+    tarea.value = ""
+  }
+
+
   return (
+    
     <Fragment>
-        <BoxLista> </BoxLista>
+     
+        <ContenedorLista 
+        
+         lista={lista} 
+         agregar={agregarTarea}
+        /> 
 
     </Fragment>
   );
