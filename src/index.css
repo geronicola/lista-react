@@ -160,3 +160,23 @@ li:hover {
 .showOption{
   display: block;
 }
+
+.flex-around{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.eliminar {
+  margin-left: 10px;
+}
+
+.eliminar img {
+  height: 28px;
+}
+
+.eliminar img:hover {
+  transition: ease-out;
+  cursor: pointer;
+  height: 32px;
+}

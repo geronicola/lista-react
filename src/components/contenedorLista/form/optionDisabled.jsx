@@ -1,8 +1,8 @@
 import React from "react";
 
-const OptionDisabled = ({valueOption, textOption}) => {
+const OptionDisabled = ({textOption}) => {
     return (
-        <option value={valueOption} disabled selected> {textOption} </option>
+        <option value='DEFAULT' disabled> {textOption} </option>
     )
 }
 

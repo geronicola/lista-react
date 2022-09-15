@@ -6,7 +6,7 @@ import ShowList from "./showList/showList"
 
 
 
-const ContenedorLista = ({lista, agregar, }) => {
+const ContenedorLista = ({lista, agregar, eliminar, editar}) => {
     return (
         <main>
             <Title 
@@ -32,7 +32,9 @@ const ContenedorLista = ({lista, agregar, }) => {
 
             <ShowList
                 lista={lista}  
-            />
+                eliminar={eliminar}
+                editar={editar}
+                />
         </main>
         
     
