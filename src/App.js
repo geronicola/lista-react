@@ -43,6 +43,7 @@ function App() {
           agregar={agregarTarea}
           eliminar={eliminarTarea}
           editar={editarTarea}
+    
         /> 
 
     </Fragment>

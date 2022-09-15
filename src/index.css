@@ -163,7 +163,7 @@ li:hover {
 
 .flex-around{
   display: flex;
-  justify-content: space-between;
+  justify-content:space-between;
   align-items: center;
 }
 
@@ -171,12 +171,12 @@ li:hover {
   margin-left: 10px;
 }
 
-.eliminar img {
-  height: 28px;
+.div-iconos img {
+  margin-left: 10px;
 }
 
-.eliminar img:hover {
+.div-iconos img:hover {
   transition: ease-out;
   cursor: pointer;
-  height: 32px;
+  height: 35px;
 }
