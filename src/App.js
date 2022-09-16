@@ -13,25 +13,48 @@ function App() {
     const id = Date.now()
 
     setLista([...lista, [tarea.value, prioridad.value, id]])
-    tarea.value = ""
+    return tarea.value = ""
   }
 
   const eliminarTarea = (id) => {
-      console.log(id)
+     
       setLista(lista.filter((value) => value[2] !== id))
+    
 
   };
-  
+
+
   const editarTarea = (id, newValue) => {
-    console.log(id)
+    const tarea = document.getElementById("tarea")
+    const prioridad = document.getElementById("prioridad")
+
     const edit = lista.filter((value) => value[2] == id)
-    const editCategory = edit[0]
-    // Obtengo valor
+    //const editCategory = edit[0]
 
-    console.log(editCategory[0])
-    // setLista(push 
 
+    const editTareas = edit[0]
+
+    tarea.value = editTareas[0];
+    prioridad.text = editTareas[1]
+    prioridad.value = editTareas[1]
+
+    eliminarTarea(editTareas[2])
+    console.log(lista)
 };
+
+const eliminarTodo = (e) => {
+  lista.forEach(element => {
+   setLista ([])
+  });
+      
+  
+
+
+  console.log(lista)
+}
+
+
+
   
   return (
     
@@ -43,6 +66,7 @@ function App() {
           agregar={agregarTarea}
           eliminar={eliminarTarea}
           editar={editarTarea}
+          eliminarTodo={eliminarTodo}
     
         /> 
 

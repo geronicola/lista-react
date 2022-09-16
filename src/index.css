@@ -156,12 +156,14 @@ li:hover {
   }
 }
 
-
+#lista-tareas {
+  text-align: center;
+}
 .showOption{
   display: block;
 }
 
-.flex-around{
+.flex-between{
   display: flex;
   justify-content:space-between;
   align-items: center;
