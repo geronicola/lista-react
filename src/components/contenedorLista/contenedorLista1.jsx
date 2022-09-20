@@ -6,7 +6,6 @@ import OptionDisabled from "./optionDisabled";
 
 
 
-
 const ContenedorLista = ({ lista, agregar, eliminar, editar, eliminarTodo, order }) => {
     
   return (
@@ -47,35 +46,9 @@ const ContenedorLista = ({ lista, agregar, eliminar, editar, eliminarTodo, order
             idMessage={"mensaje-lista-vacia"}
             alertText={"Parece que no hay nada por aqui!"}
           />
-          )}
-      
-      {order[0].map((item, key) => {
-          return (
-            <div className="flex-between" key={key}>
-              <li className={item[1]}> {item[0]} </li>
-              <div className="div-iconos">
-                <img
-                  src="/editar.png"
-                  alt="icono editar"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    editar(item[2]);
-                  }}
-                />
-                <img
-                  src="/eliminar.png"
-                  alt="icono eliminar"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    eliminar(item[2]);
-                  }}
-                />
-              </div>
-            </div>
-          )})
-        }
+        )}
 
-        {order[1].map((item, key) => {
+        { lista.map((item, key) => {
           return (
             <div className="flex-between" key={key}>
               <li className={item[1]}> {item[0]} </li>
@@ -98,35 +71,9 @@ const ContenedorLista = ({ lista, agregar, eliminar, editar, eliminarTodo, order
                 />
               </div>
             </div>
-          );})
-        }
-        {order[2].map((item, key) => {
-          return (
-            <div className="flex-between" key={key}>
-              <li className={item[1]}> {item[0]} </li>
-              <div className="div-iconos">
-                <img
-                  src="/editar.png"
-                  alt="icono editar"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    editar(item[2]);
-                  }}
-                />
-                <img
-                  src="/eliminar.png"
-                  alt="icono eliminar"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    eliminar(item[2]);
-                  }}
-                />
-              </div>
-            </div>
-          );})
-        }
+          );
+        })}
       </ul>
-      
       {lista.length > 0 && (
          <button 
          className="deleteAll"
